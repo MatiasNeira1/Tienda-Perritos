@@ -3,7 +3,7 @@ name: CI/CD Tienda Perritos - Frontend
 on:
   push:
     branches: [ "deploy" ]
-    
+    #=======================
 
 jobs:
   build-push-deploy-frontend:
