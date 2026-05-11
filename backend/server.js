@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const {
-  DB_HOST = "database", // Usar el servicio Docker por defecto
+ DB_HOST = process.env.DB_HOST || "database", // Usar el servicio Docker por defecto
   DB_USER = "alumno",
   DB_PASSWORD = "alumno123",
   DB_NAME = "tienda_perritos",
