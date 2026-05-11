@@ -5,13 +5,11 @@ const mysql = require("mysql2/promise");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const {
- DB_HOST = process.env.DB_HOST || "database", // Usar el servicio Docker por defecto
-  DB_USER = "alumno",
-  DB_PASSWORD = "alumno123",
-  DB_NAME = "tienda_perritos",
-  DB_PORT = 3306,
-} = process.env;
+const DB_HOST = process.env.DB_HOST || "database";
+const DB_USER = process.env.DB_USER || "alumno";
+const DB_PASSWORD = process.env.DB_PASSWORD || "alumno123";
+const DB_NAME = process.env.DB_NAME || "tienda_perritos";
+const DB_PORT = process.env.DB_PORT || 3306;
 
 app.use(cors());
 app.use(express.json());
